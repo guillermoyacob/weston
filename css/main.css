@@ -1,0 +1,75 @@
+/* SECTION HEADER */
+.header{
+    background-image: url(../img/bg-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.img-logo{
+    width: 40px;
+}
+
+.vh-50{
+    height: 50vmin;
+}
+
+/* SECTION EXPERIENCE */
+.card-img-filter{
+    filter: brightness(0.5);
+}
+
+.card{
+    transition-duration: .6s;
+    clip-path: polygon(
+        50% 0,
+        100% 0,
+        100% 50%,
+        100% 100%,
+        50% 100%,
+        0% 100%,
+        0 50%,
+        0 0
+    );
+}
+
+.card-effect:hover .card{
+    clip-path: polygon(
+        50% 0,
+        50% 0,
+        100% 50%,
+        100% 50%,
+        50% 100%,
+        50% 100%,
+        0 50%,
+        0 50%
+    );
+}
+
+.card-img-overlay{
+    transition-duration: 0.6s;
+}
+
+.card-effect:hover .card-img-overlay{
+    transform: scale(0.9);
+}
+
+/* SECTION COMMENTS */
+.comments{
+    background-image: url(../img/bg-clients.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.comments__img{
+    --tamano: 80px;
+    width: var(--tamano);
+    height: var(--tamano);
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 7px 7px 7px rgba(0 0 0 / 0.5);
+    border: 3px ridge #fff;
+}
+
+.transform-turn{
+    transform: rotate(.5turn);
+}
