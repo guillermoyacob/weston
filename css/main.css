@@ -1,66 +1,74 @@
 /* SECTION HEADER */
-.header{
+.header {
     background-image: url(../img/bg-header.jpg);
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 
-.img-logo{
+.img-logo {
     width: 40px;
 }
 
-.vh-50{
+.header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.vh-50 {
     height: 50vmin;
 }
 
 /* SECTION EXPERIENCE */
-.card-img-filter{
+.card-img-filter {
     filter: brightness(0.5);
 }
 
-.card{
+.card {
     transition-duration: .6s;
-    clip-path: polygon(
-        50% 0,
-        100% 0,
-        100% 50%,
-        100% 100%,
-        50% 100%,
-        0% 100%,
-        0 50%,
-        0 0
-    );
+    clip-path: polygon(50% 0,
+            100% 0,
+            100% 50%,
+            100% 100%,
+            50% 100%,
+            0% 100%,
+            0 50%,
+            0 0);
 }
 
-.card-effect:hover .card{
-    clip-path: polygon(
-        50% 0,
-        50% 0,
-        100% 50%,
-        100% 50%,
-        50% 100%,
-        50% 100%,
-        0 50%,
-        0 50%
-    );
+.card-effect:hover .card {
+    clip-path: polygon(50% 0,
+            50% 0,
+            100% 50%,
+            100% 50%,
+            50% 100%,
+            50% 100%,
+            0 50%,
+            0 50%);
 }
 
-.card-img-overlay{
+.card-img-overlay {
     transition-duration: 0.6s;
 }
 
-.card-effect:hover .card-img-overlay{
+.card-effect:hover .card-img-overlay {
     transform: scale(0.9);
 }
 
 /* SECTION COMMENTS */
-.comments{
+.comments {
     background-image: url(../img/bg-clients.jpeg);
     background-position: center;
     background-size: cover;
 }
 
-.comments__img{
+.comments__img {
     --tamano: 80px;
     width: var(--tamano);
     height: var(--tamano);
@@ -70,13 +78,13 @@
     border: 3px ridge #fff;
 }
 
-.transform-turn{
+.transform-turn {
     transform: rotate(.5turn);
 }
 
 /* SECTION INSPIRATION */
 
-.media-object-img{
+.media-object-img {
     --tamano: 65px;
     width: var(--tamano);
     height: var(--tamano);
@@ -84,6 +92,19 @@
 }
 
 /* CAROUSEL */
-.carousel-weston-middle{
+.carousel-weston-middle {
     top: 35%;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 375px) {
+    .vh-50 {
+        height: 50vmax;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .vh-50 {
+        height: 55vmax;
+    }
 }
